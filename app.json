@@ -1,5 +1,8 @@
 {
   "expo": {
+    "androidNavigationBar": {
+      "visible": "sticky-immersive"
+    },
     "name": "promodoro",
     "slug": "promodoro",
     "version": "1.0.0",
@@ -13,9 +16,7 @@
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true
     },

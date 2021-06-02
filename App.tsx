@@ -1,21 +1,31 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React from "react";
+import { StatusBar, View, StyleSheet } from "react-native";
+import { CountDownStorage } from "./src/contexts/CountDownContext";
 
-export default function App() {
+import Home from "./src/screens/home";
+
+import { colors } from "./src/styles/global";
+
+export default function Apps() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <CountDownStorage>
+      <View style={styles.container}>
+        <Home />
+      </View>
+      <StatusBar hidden={true} />
+    </CountDownStorage>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    width: "100%",
+    height: "100%",
+
+    paddingTop: 8,
+    paddingHorizontal: 16,
+    paddingBottom: 25,
+
+    backgroundColor: colors.black,
   },
 });

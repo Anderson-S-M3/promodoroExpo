@@ -1,20 +1,27 @@
 import React from "react";
-import { StatusBar, View, StyleSheet } from "react-native";
+import { SafeAreaView, View } from "react-native";
+import { StatusBar } from "expo-status-bar";
 import { CountDownStorage } from "./src/contexts/CountDownContext";
 
 import Home from "./src/screens/home";
 
-import { global } from "./src/styles/global";
+import { global, colors } from "./src/styles/global";
 
 export default function Apps() {
   return (
     <>
-      <StatusBar hidden={true} />
-      <CountDownStorage>
-        <View style={global.container}>
-          <Home />
-        </View>
-      </CountDownStorage>
+      <SafeAreaView>
+        <StatusBar
+          backgroundColor={colors.black}
+          style="light"
+          translucent={false}
+        />
+        <CountDownStorage>
+          <View style={global.container}>
+            <Home />
+          </View>
+        </CountDownStorage>
+      </SafeAreaView>
     </>
   );
 }

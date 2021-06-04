@@ -1,10 +1,11 @@
 import React from "react";
-import { Text, Dimensions, StyleSheet } from "react-native";
+import { Text, Dimensions } from "react-native";
 import { AnimatedCircularProgress } from "react-native-circular-progress";
 import { Circle } from "react-native-svg";
-import { CountDownContext } from "../contexts/CountDownContext";
+import { CountDownContext } from "../../contexts/CountDownContext";
 
-import { colors } from "../styles/global";
+import { colors } from "../../styles/global";
+import styles from "./styles/circularProgressBar";
 
 const CircularProgressBar = () => {
   const { time, timer, minutos, segundos } = React.useContext(CountDownContext);
@@ -22,6 +23,7 @@ const CircularProgressBar = () => {
       tintColor={colors.boldBlue}
       backgroundColor={colors.black}
       style={styles.circle}
+      lineCap="round"
       renderCap={({ center }) => (
         <Circle cx={center.x} cy={center.y} r="8" fill={colors.lightBlue} />
       )}
@@ -30,20 +32,5 @@ const CircularProgressBar = () => {
     </AnimatedCircularProgress>
   );
 };
-
-const styles = StyleSheet.create({
-  title: {
-    fontSize: 50,
-    color: colors.white,
-  },
-
-  circle: {
-    borderRadius: 999,
-    elevation: 25,
-    backgroundColor: colors.black2,
-    borderWidth: 6,
-    borderColor: colors.black2,
-  },
-});
 
 export default CircularProgressBar;

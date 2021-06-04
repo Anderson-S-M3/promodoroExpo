@@ -1,4 +1,7 @@
 import React from "react";
+import { Vibration } from "react-native";
+import { Audio } from "expo-av";
+import { sucessSong } from "../utils/songs";
 
 interface CountDownContextProps {
   time: number;
@@ -17,9 +20,9 @@ export const CountDownContext = React.createContext(
 );
 
 export function CountDownStorage({ children }: any) {
-  const timer = 1 * 60;
-  const [time, setTime] = React.useState(timer);
-  const [active, setActive] = React.useState(false);
+  const timer = 0.05 * 60;
+  const [time, setTime] = React.useState<number>(timer);
+  const [active, setActive] = React.useState<boolean>(false);
 
   let minutos: number | string = Math.floor(time / 60);
   let segundos: number | string = time % 60;
@@ -44,6 +47,7 @@ export function CountDownStorage({ children }: any) {
 
   function restartCountDown() {
     setTime(timer);
+    setActive(false);
     clearTimeout(countDownRegress);
   }
 
@@ -53,6 +57,14 @@ export function CountDownStorage({ children }: any) {
         setTime(time - 1);
       }, 1000);
     }
+    if (active && time == 0) {
+      Vibration.vibrate(
+        [0.3 * 1000, 0.3 * 1000, 0.3 * 1000, 0.3 * 1000, 1 * 1000],
+        false
+      );
+
+      sucessSong();
+    } else Vibration.cancel();
   }, [active, time]);
 
   return (

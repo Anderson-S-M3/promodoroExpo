@@ -1,67 +1,32 @@
 import React from "react";
-import { StyleSheet, Text, TouchableOpacity } from "react-native";
-import { CountDownContext } from "../../contexts/CountDownContext";
-import { colors } from "../../styles/global";
+import { Text, TouchableOpacity } from "react-native";
 
-const ButtonRetang = ({ title, change }: any) => {
-  const { startCountDown, pauseCountDown, restartCountDown } =
-    React.useContext(CountDownContext);
+import styles from "./styles/buttonRetang";
 
-  const [startStop, setStartStop] = React.useState("Começar");
+interface ButtonRetangProps {
+  title: string;
+  disable: boolean;
+  onPress?: () => void;
+}
 
-  function onPressStartStop() {
-    setStartStop(startStop === "Começar" ? "Reiniciar" : "Começar");
-
-    if (startStop === "Começar") {
-      startCountDown();
-    } else if (startStop === "Reiniciar") {
-      restartCountDown();
-      pauseCountDown();
-    }
-  }
-
-  function onPressStop() {
-    pauseCountDown();
-  }
-
-  if (change === "StartStop") {
+const ButtonRetang = ({ title, disable, onPress }: ButtonRetangProps) => {
+  if (disable === true) {
     return (
-      <TouchableOpacity onPress={onPressStartStop} style={styles.button}>
-        <Text style={styles.text}>{startStop}</Text>
-      </TouchableOpacity>
-    );
-  }
-
-  if (change === "Stop") {
-    return (
-      <TouchableOpacity onPress={onPressStop} style={styles.button}>
-        <Text style={styles.text}>{title}</Text>
+      <TouchableOpacity
+        style={styles.buttonDisable}
+        disabled={disable}
+        onPress={onPress}
+      >
+        <Text style={styles.textDisable}>{title}</Text>
       </TouchableOpacity>
     );
   }
 
   return (
-    <TouchableOpacity style={styles.button}>
+    <TouchableOpacity style={styles.button} onPress={onPress}>
       <Text style={styles.text}>{title}</Text>
     </TouchableOpacity>
   );
 };
-
-const styles = StyleSheet.create({
-  button: {
-    flex: 1,
-    borderRadius: 8,
-    paddingVertical: 16,
-    backgroundColor: colors.boldBlue,
-    alignItems: "center",
-  },
-
-  text: {
-    letterSpacing: 1,
-    fontSize: 16,
-    textTransform: "capitalize",
-    color: colors.white,
-  },
-});
 
 export default ButtonRetang;

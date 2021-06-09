@@ -7,14 +7,6 @@ const styles = StyleSheet.create({
     fontSize: 50,
     color: colors.white,
   },
-
-  circle: {
-    borderRadius: 999,
-    elevation: 25,
-    backgroundColor: colors.black2,
-    borderWidth: 6,
-    borderColor: colors.black2,
-  },
 });
 
 export default styles;

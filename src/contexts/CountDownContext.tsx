@@ -1,6 +1,5 @@
 import React from "react";
 import { Vibration } from "react-native";
-import { Audio } from "expo-av";
 import { sucessSong } from "../utils/songs";
 
 interface CountDownContextProps {
@@ -10,7 +9,6 @@ interface CountDownContextProps {
   segundos: number | string;
 
   active: boolean;
-  pauseCountDown: () => void;
   startCountDown: () => void;
   restartCountDown: () => void;
 }
@@ -20,7 +18,7 @@ export const CountDownContext = React.createContext(
 );
 
 export function CountDownStorage({ children }: any) {
-  const timer = 25 * 60;
+  const timer = 0.05 * 60;
   const [time, setTime] = React.useState<number>(timer);
   const [active, setActive] = React.useState<boolean>(false);
 
@@ -40,11 +38,6 @@ export function CountDownStorage({ children }: any) {
     setActive(true);
   }
 
-  function pauseCountDown() {
-    setActive(false);
-    clearTimeout(countDownRegress);
-  }
-
   function restartCountDown() {
     setTime(timer);
     setActive(false);
@@ -62,7 +55,6 @@ export function CountDownStorage({ children }: any) {
         [0.3 * 1000, 0.3 * 1000, 0.3 * 1000, 0.3 * 1000, 1 * 1000],
         false
       );
-
       sucessSong();
     } else Vibration.cancel();
   }, [active, time]);
@@ -77,7 +69,6 @@ export function CountDownStorage({ children }: any) {
         startCountDown,
         restartCountDown,
         active,
-        pauseCountDown,
       }}
     >
       {children}

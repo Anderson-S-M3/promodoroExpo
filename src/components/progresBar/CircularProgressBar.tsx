@@ -21,8 +21,7 @@ const CircularProgressBar = () => {
       width={15}
       fill={100 - percent}
       tintColor={colors.boldBlue}
-      backgroundColor={colors.black}
-      style={styles.circle}
+      backgroundColor={colors.darkBlue}
       lineCap="round"
       renderCap={({ center }) => (
         <Circle cx={center.x} cy={center.y} r="8" fill={colors.lightBlue} />

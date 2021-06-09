@@ -2,13 +2,13 @@ import { StyleSheet } from "react-native";
 
 export const colors = {
   white: "#f2f3f5",
-  black: "#090a0a",
+  black: "#000000",
 
-  grey: "#121212",
+  grey: "#090a0a",
   boldGrey: "#373737",
 
-  lightBlue: "#5864dd",
-  boldBlue: "#5c3cbd",
+  lightBlue: "#6374ff",
+  boldBlue: "#4953B8",
   darkBlue: "#110b24",
 };
 

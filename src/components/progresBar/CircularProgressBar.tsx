@@ -19,7 +19,7 @@ const CircularProgressBar = () => {
       rotation={360}
       size={size}
       width={15}
-      fill={100 - percent}
+      fill={50}
       tintColor={colors.boldBlue}
       backgroundColor={colors.darkBlue}
       lineCap="round"

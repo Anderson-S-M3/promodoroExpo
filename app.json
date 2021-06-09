@@ -1,10 +1,10 @@
 {
   "expo": {
     "androidStatusBar": {
-      "backgroundColor": "#090a0a"
+      "backgroundColor": "#000000"
     },
     "androidNavigationBar": {
-      "backgroundColor": "#090a0a",
+      "backgroundColor": "#000000",
       "visible": "sticky-immersive"
     },
     "name": "Promodoro",
@@ -15,7 +15,7 @@
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#09090A"
+      "backgroundColor": "#000000"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
@@ -28,7 +28,7 @@
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#09090A"
+        "backgroundColor": "#000000"
       },
       "package": "com.anderson.promodoro"
     }

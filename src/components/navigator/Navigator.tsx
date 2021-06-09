@@ -13,14 +13,15 @@ import Home from "../../screens/home";
 import Task from "../../screens/task";
 
 import { colors } from "../../styles/global";
+import { CountDownContext } from "../../contexts/CountDownContext";
 
 export default function Navigator() {
+  const { active } = React.useContext(CountDownContext);
   const Tab = createBottomTabNavigator();
 
   function Tabs() {
     return (
       <Tab.Navigator
-        initialRouteName="Home"
         tabBarOptions={{
           activeTintColor: colors.boldBlue,
           inactiveTintColor: colors.boldGrey,
@@ -65,7 +66,7 @@ export default function Navigator() {
           backgroundColor: colors.grey,
         }}
       >
-        <Tabs />
+        {active ? <Home /> : <Tabs />}
       </View>
     </NavigationContainer>
   );

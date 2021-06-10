@@ -9,4 +9,12 @@ export default StyleSheet.create({
 
     backgroundColor: colors.black,
   },
+
+  title: {
+    color: colors.boldBlue,
+    fontSize: 25,
+    fontWeight: "bold",
+
+    letterSpacing: 2,
+  },
 });

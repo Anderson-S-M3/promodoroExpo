@@ -18,7 +18,7 @@ export const CountDownContext = React.createContext(
 );
 
 export function CountDownStorage({ children }: any) {
-  const timer = 0.05 * 60;
+  const timer = 25 * 60;
   const [time, setTime] = React.useState<number>(timer);
   const [active, setActive] = React.useState<boolean>(false);
 

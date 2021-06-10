@@ -28,7 +28,7 @@ export default function index() {
       <View style={global.container}>
         <View style={styles.container}>
           <View>
-            <Text style={{ color: colors.white }}>V1.5</Text>
+            <Text style={styles.title}>Promodoro</Text>
           </View>
           <View>
             <CircularProgressBar />

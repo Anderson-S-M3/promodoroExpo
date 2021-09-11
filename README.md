@@ -2,18 +2,16 @@
 <a href="https://github.com/Anderson-S-M3/dashBoardCovid"> ⏰ Promodoro ⏰</a>
 </h1>
 
-<p align="center">Promodoro com exercícios após o término do ciclo</p>
-
 <p align="center">
-<img alt="Version APP" src="https://img.shields.io/badge/Version-1.0.0-orange"> <img alt="Expo" src="https://img.shields.io/badge/-Expo-blue">  <img alt="License" src="https://img.shields.io/badge/license-GNU-brightgreen"> </p>
+<img alt="Version APP" src="https://img.shields.io/badge/Version-1.0.0-orange"> <img alt="Expo" src="https://img.shields.io/badge/-Expo-blue">  <img alt="License" src="https://img.shields.io/badge/license-GNU-brightgreen"></p>
 
 <h4 align="center"> 🚧 Em construção 🚧 </h4>
-<h5 align="center"> 🔺Futuras features: Add Tasks🔺 </h5>
+<h5 align="center"> 🔺Próxima atualização: Add Tasks🔺 </h5>
 
 <p align="center"><a href="#instalacao">Instalação</a> • <a href="#rodando">Como rodar o App</a> • <a href="#tecnologias">Tecnologias</a></p>
 
 
-<div align="center"><img height="450px" src="https://user-images.githubusercontent.com/65872811/121566615-0fd8c600-c9f4-11eb-88b4-0f1a3141229b.jpeg"> <img height="450px" src="https://user-images.githubusercontent.com/65872811/121566652-18c99780-c9f4-11eb-8d5e-d64ca4fc5e56.jpeg"> <img height="450px" src="https://user-images.githubusercontent.com/65872811/121566731-2d0d9480-c9f4-11eb-9f5d-e52d821132b5.jpeg"> <img height="450px" src="https://user-images.githubusercontent.com/65872811/121566008-727d9200-c9f3-11eb-9928-300e6fd1ddce.gif"></div>
+<div align="center"><img height="450px" src="https://user-images.githubusercontent.com/65872811/121566615-0fd8c600-c9f4-11eb-88b4-0f1a3141229b.jpeg" /> <img height="450px" src="https://user-images.githubusercontent.com/65872811/121566652-18c99780-c9f4-11eb-8d5e-d64ca4fc5e56.jpeg" /><img height="450px" src="https://user-images.githubusercontent.com/65872811/121566731-2d0d9480-c9f4-11eb-9f5d-e52d821132b5.jpeg" /></div>
 
 
 <h2 id="instalacao">Instalação:</h2>
@@ -52,23 +50,22 @@ no http://localhost:19002/ ou do CMD/Terminal
 ```
 
 <h2 id="tecnologias">🛠 Tecnologias</h2>
+
 - [Expo](https://docs.expo.io/)
+
 - [TypeScript](https://www.typescriptlang.org/)
 
-<br>
-<br>
+<br/>
+<br/>
 
 ## 📝 Licença
 ---
-
 Este projeto esta sobe a licença [GNU 2.0](./LICENSE).
 
-<br>
 <br>
 
 ### Autor
 ---
-
 Feito com :blue_heart: por Anderson S. 👋🏽 Entre em contato!
 
 [![Linkedin Badge](https://img.shields.io/badge/Anderson_S-0077B5?style=for-the-badge&logo=linkedin&logoColor=white/)](https://www.linkedin.com/in/anderson-s-antunes-b879251b9/) <br>
